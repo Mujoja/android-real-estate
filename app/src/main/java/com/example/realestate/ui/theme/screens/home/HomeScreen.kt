@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.realestate.R
+import com.example.realestate.navigation.ROUT_DETAIL
 import com.example.realestate.ui.theme.brown
 
 
@@ -63,7 +64,7 @@ fun HomeScreen(navController: NavController){
 
         Spacer(modifier = Modifier.height(100.dp))
 
-        Button(onClick = { /*TODO*/ },
+        Button(onClick = { navController .navigate(ROUT_DETAIL)},
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
