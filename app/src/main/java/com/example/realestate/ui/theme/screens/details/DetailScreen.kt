@@ -18,6 +18,8 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -44,6 +46,9 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.realestate.R
+import com.example.realestate.navigation.ROUT_DETAIL
+import com.example.realestate.navigation.ROUT_INTENT
+import com.example.realestate.navigation.ROUT_PROPERTY
 import com.example.realestate.ui.theme.brown
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -188,6 +193,21 @@ fun DetailScreen(navController: NavController){
             }
             //End of card 5
         }
+
+        Spacer(modifier = Modifier.height(20.dp))
+        Button(onClick = { navController.navigate(ROUT_PROPERTY)},
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(50.dp)
+                .padding(start = 20.dp, end = 20.dp),
+            colors = ButtonDefaults.buttonColors(Color.DarkGray)
+
+        ) {
+            Text(text = "Continue")
+
+        }
+
+
 
 
 
